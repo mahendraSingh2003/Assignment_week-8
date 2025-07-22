@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Background</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Remove Background from Images</h1>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+
+        <% if (result) { %>
+            <div class="images">
+                <div>
+                    <h3>Original Image</h3>
+                    <img src="<%= result.original %>" alt="Original Image" style="max-width:300px;">
+                </div>
+                <div>
+                    <h3>Background Removed</h3>
+                    <img src="<%= result.removed %>" alt="Processed Image" style="max-width:300px;">
+                </div>
+            </div>
+
+            <form action="/download/<%= result.id %>" method="get">
+                <button type="submit">Download Processed Image</button>
+            </form>
+        <% } %>
+    </div>
+</body>
+</html>

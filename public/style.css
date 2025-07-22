@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 2em;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 2em;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+form {
+    margin-bottom: 2em;
+}
+
+input[type="file"] {
+    margin: 1em 0;
+}
+
+button {
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.images img {
+    max-width: 250px;
+    border: 1px solid #ccc;
+}
